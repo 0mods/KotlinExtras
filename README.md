@@ -1,12 +1,12 @@
 # KotlinExtras
 
-KotlinExtras contains the basic libraries for Kotlin
+KotlinExtras 1.3 contains the basic libraries for Kotlin:
 
-| Library              | Version  | Sub libraries                                                                                                                                                                                      |
-|----------------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Kotlin               | 2.0.0    | `reflect`, `stdlib`, `stdlib-common`                                                                                                                                                               |
-| Kotlin Coroutines    | 1.9.0-RC | `coroutines-core`, `coroutines-jvm`, `coroutines-jdk8`                                                                                                                                             |
-| Kotlin Serialization | 1.6.3    | `serialization-core`, `serialization-json-jvm`, `serialization-json`, `serialization-json-okio`, `serialization-hocon`, `serialization-protobuf`, `serialization-cbor`, `serialization-properties` |
+| Library              | Version  | Sub libraries                                                                                                                                                                                      | Specials        |
+|----------------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|
+| Kotlin               | 2.0.0    | `reflect`, `stdlib`, `stdlib-common`, `stdlib-jdk7`, `stdlib-jdk8`                                                                                                                                 |                 |
+| Kotlin Coroutines    | 1.9.0-RC | `coroutines-core`, `coroutines-jvm`, `coroutines-jdk8`                                                                                                                                             |                 |
+| Kotlin Serialization | 1.7.0    | `serialization-core`, `serialization-json-jvm`, `serialization-json`, `serialization-json-okio`, `serialization-hocon`, `serialization-protobuf`, `serialization-cbor`, `serialization-properties` | Hocon (v 1.6.3) |
 
 ## How to Install?
 

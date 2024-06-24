@@ -6,10 +6,12 @@ plugins {
 }
 
 val kotlinVersion: String by project
+val coroutinesVersion: String by project
+val serializationVersion: String by project
 val shadow: Configuration = configurations["shadow"]
 
-group = "team._0mods"
-version = "kotlin-$kotlinVersion"
+group = "team.0mods"
+version = "1.3"
 
 repositories {
     mavenCentral()
@@ -20,11 +22,10 @@ configurations {
 }
 
 dependencies {
-    val coroutinesVersion: String by project
-    val serializationVersion: String by project
-
     shadow(kotlin("reflect", kotlinVersion))
     shadow(kotlin("stdlib", kotlinVersion))
+    shadow(kotlin("stdlib-jdk7", kotlinVersion))
+    shadow(kotlin("stdlib-jdk8", kotlinVersion))
     shadow(kotlin("stdlib-common", kotlinVersion))
     shadow(kotlinx("coroutines-core", coroutinesVersion))
     shadow(kotlinx("coroutines-core-jvm", coroutinesVersion))
@@ -33,7 +34,7 @@ dependencies {
     shadow(kotlinx("serialization-json", serializationVersion))
     shadow(kotlinx("serialization-json-jvm", serializationVersion))
     shadow(kotlinx("serialization-json-okio", serializationVersion))
-    shadow(kotlinx("serialization-hocon", serializationVersion))
+    shadow(kotlinx("serialization-hocon", "1.6.3"))
     shadow(kotlinx("serialization-protobuf", serializationVersion))
     shadow(kotlinx("serialization-cbor", serializationVersion))
     shadow(kotlinx("serialization-properties", serializationVersion))
@@ -63,7 +64,7 @@ publishing {
         maven {
             url = uri("https://maven.0mods.team/releases")
             credentials {
-                username = project.properties["mvn_login"].toString()
+                username = project.properties ["mvn_login"].toString()
                 password = project.properties["mvn_pass"].toString()
             }
         }

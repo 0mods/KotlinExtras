@@ -8,10 +8,11 @@ plugins {
 val kotlinVersion: String by project
 val coroutinesVersion: String by project
 val serializationVersion: String by project
+val kteVer: String by project
 val shadow: Configuration = configurations["shadow"]
 
 group = "team.0mods"
-version = "1.3"
+version = kteVer
 
 repositories {
     mavenCentral()
@@ -34,7 +35,7 @@ dependencies {
     shadow(kotlinx("serialization-json", serializationVersion))
     shadow(kotlinx("serialization-json-jvm", serializationVersion))
     shadow(kotlinx("serialization-json-okio", serializationVersion))
-    shadow(kotlinx("serialization-hocon", "1.6.3"))
+    shadow(kotlinx("serialization-hocon", serializationVersion))
     shadow(kotlinx("serialization-protobuf", serializationVersion))
     shadow(kotlinx("serialization-cbor", serializationVersion))
     shadow(kotlinx("serialization-properties", serializationVersion))

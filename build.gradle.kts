@@ -23,7 +23,6 @@ configurations {
 }
 
 dependencies {
-    shadow(kotlin("reflect", kotlinVersion))
     shadow(kotlin("stdlib", kotlinVersion))
     shadow(kotlin("stdlib-jdk7", kotlinVersion))
     shadow(kotlin("stdlib-jdk8", kotlinVersion))

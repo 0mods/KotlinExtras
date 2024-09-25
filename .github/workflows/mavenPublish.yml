@@ -1,7 +1,7 @@
 name: mavenPublish
 on:
   push:
-    branches: [ "disabledworkflow" ]
+    branches: [ "main" ]
 
 jobs:
   build:

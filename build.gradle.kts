@@ -64,8 +64,8 @@ publishing {
         maven {
             url = uri("https://maven.0mods.team/releases")
             credentials {
-                username = project.properties ["mvn_login"].toString()
-                password = project.properties["mvn_pass"].toString()
+                username = System.getenv("MAVEN_USER")
+                password = System.getenv("MAVEN_PASSWORD")
             }
         }
     }
